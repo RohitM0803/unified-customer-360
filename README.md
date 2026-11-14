@@ -703,3 +703,13 @@ The project prioritizes **data integrity, traceability, repeatability and mainta
 ---
 
 **Technology:** Python 3.13 · DuckDB · SQL · pytest · CSV · Parquet
+
+## Quick demo and measured validation
+
+A clean synthetic sample is included in `sample_clean/` with 25 rows per source. Run it with:
+
+```powershell
+.venv\Scripts\python.exe pipeline.py --input sample_clean --database database/customer360.duckdb --raw-root data/raw/archive --source-system demo
+```
+
+The reproducible 100K benchmark, identical-rerun results, rejection counts, database table counts, and latest test result are documented in [Recorded validation results](docs/validation-results.md). The benchmark data and database are generated locally and are not checked in.
