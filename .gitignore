@@ -1,0 +1,17 @@
+﻿# Local environments and caches
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+
+# Generated inputs, archives, reports, and databases
+data/
+database/
+output/
+*.duckdb
+*.db
+
+# Python build artifacts
+build/
+dist/
+*.egg-info/

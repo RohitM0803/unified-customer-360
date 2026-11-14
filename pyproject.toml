@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unified-customer-view"
+version = "1.0.0"
+description = "Local DuckDB Medallion pipeline for a unified customer view"
+requires-python = ">=3.10"
+dependencies = ["duckdb==2.0.0"]
+
+[project.optional-dependencies]
+dev = ["pytest==9.2.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-ra"
+markers = ["integration: exercises the 100k-row end-to-end dataset"]
